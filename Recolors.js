@@ -396,9 +396,20 @@ function createEditor() {
         partName.style.backgroundColor = "rgb(" + rgb[i] + ", " + rgb[i+1] + ", " + rgb[i+2] + ")";
 
         // lets also add the hex code for each part
-        const hexDiv = document.createElement("div");
+        const hexDiv = document.createElement("input");
         hexDiv.classList.add("hexDiv");
-        hexDiv.innerHTML = "#" + rgbToHex(rgb[i], rgb[i+1], rgb[i+2]);
+        hexDiv.value = "#" + rgbToHex(rgb[i], rgb[i+1], rgb[i+2]);
+        hexDiv.addEventListener("input", () => {
+            const hex = hexDiv.value.replace("#", "");
+            if (!/^[0-9a-fA-F]{6}$/.test(hex)) return; // wait until it's a full 6-character code
+            const newRgb = [...hexDecode(codeInput.value)];
+            const newColor = hex2rgb(hex);
+            newRgb[i] = newColor[0];
+            newRgb[i+1] = newColor[1];
+            newRgb[i+2] = newColor[2];
+            genCodeManual(newRgb);
+            changeSliders();
+        });
 
         // add the rgb values with a cool colored icon next to them
         const red = genColorDiv(rgb[i], rgb[i] + ", 0, 0");

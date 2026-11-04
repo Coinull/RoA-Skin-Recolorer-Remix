@@ -582,6 +582,10 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase;
     padding: 0px 0px;
     width: 80px;
+    background: none;
+    color:white;
+    border: none;
+    font: inherit;
 }
 .colorDiv {
     padding: 0px 10px 0px 0px;
