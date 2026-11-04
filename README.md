@@ -1,4 +1,4 @@
-<h1 align="center">RoA Skin Recolorer</h1>
+<h1 align="center">RoA Skin Recolorer </h1> <h1>[color=#6F00FF][REMIX][/color]></h1>
 
 <p align="center">
 
