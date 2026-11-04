@@ -10,4 +10,4 @@ Modifies Eeadek's Rivals of Aether's recolor tool to add simple QOL
 
 So far only hex input has been added, but hopefully more in the future!
 
-Go [here](https://coinull.github.io/RoA-Skin-Recolorer-Remix/) to try it out.
+Go [here](https://coinull.github.io/RoA-Skin-Recolorer-Remix/) to try it out!
