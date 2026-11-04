@@ -765,6 +765,15 @@ body::-webkit-scrollbar-thumb {
     fill: white;
     transform: translate(0px, 1px);
 }
+#remixgithubButton {
+    background-color: #272727;
+}
+#remixgithubIcon {
+    height: 23px;
+    width: 23px;
+    fill: white;
+    transform: translate(0px, 1px);
+}
 #resourcesButton {
     background-color: #c2934d;
 }
