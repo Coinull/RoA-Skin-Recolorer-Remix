@@ -428,7 +428,6 @@ function createEditor() {
         part.appendChild(green);
         part.appendChild(blue);
         if (aCheck) part.appendChild(alpha);
-
         partList.appendChild(part);
 
         count++;
@@ -786,6 +785,11 @@ function darkMode() {
 }
 darkMode(); // to activate at startup
 
+// eyecandy focus enhancer 90000
+document.getElementById("focusCheck").addEventListener("click", () => {
+    const img = document.getElementById("focusImg");
+    img.style.display = document.getElementById("focusCheck").checked ? "block" : "none";
+});
 
 // called when the user clicks on a part
 function showSliders() {
@@ -834,7 +838,7 @@ function showSliders() {
     
     // change the color of the "now editing" indicator
     editingHex.style.backgroundColor = "rgb(" + rgb[partNum*4] + ", " + rgb[partNum*4+1] + ", " + rgb[partNum*4+2] + ")";
-
+    syncBoxes();
 }
 
 document.getElementById("hideEditor").addEventListener("click", hideSliders);
