@@ -791,6 +791,12 @@ document.getElementById("focusCheck").addEventListener("click", () => {
     img.style.display = document.getElementById("focusCheck").checked ? "block" : "none";
 });
 
+// Notes box
+document.getElementById("notepad").addEventListener("click", () => {
+    const box = document.getElementById("notesBox");
+    box.style.display = document.getElementById("notepad").checked ? "block" : "none";
+});
+
 // called when the user clicks on a part
 function showSliders() {
     
