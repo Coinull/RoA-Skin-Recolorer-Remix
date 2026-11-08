@@ -1104,12 +1104,11 @@ a:visited {
         width: auto;
     }
     .hexDiv {
-        display: none;
+        width: 70px;
     }
     .colorDiv {
         margin-left: 5px;
     }
-
     #options {
         flex-direction: column;
     }
