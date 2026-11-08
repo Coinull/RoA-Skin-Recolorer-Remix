@@ -1128,10 +1128,18 @@ a:visited {
 }
 #notesBox {
     position: fixed;
-    right: 10px;
+    left: 10px;
     top: 50%;
     width: 250px;
     display: none;
     font: inherit;
-    
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 12px;
+}
+/* this is to add a border to the color of the notepad when selected*/
+#notesBox:focus {
+    outline: 1px solid rgba(148, 132, 201, 1);
 }
