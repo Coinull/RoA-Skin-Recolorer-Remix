@@ -395,6 +395,20 @@ function createEditor() {
         partName.classList.add("partName");
         partName.style.backgroundColor = "rgb(" + rgb[i] + ", " + rgb[i+1] + ", " + rgb[i+2] + ")";
 
+        //making the color swap thing a draggable thing from the names
+        const partNum = i/4;
+        partName.draggable = true;
+        partName.addEventListener("dragstart", (e) => {
+            e.dataTransfer.setData("text/plain", partNum);
+        });
+        part.addEventListener("dragover", (e) => e.preventDefault());
+        part.addEventListener("drop", e => {
+            e.preventDefault();
+            const from = Number(e.dataTransfer.getData("text/plain"));
+            if (isNaN(from) || from === partNum) return;
+            swapColors(from, partNum);
+        });
+
         // lets also add the hex code for each part
         const hexDiv = document.createElement("input");
         hexDiv.classList.add("hexDiv");
@@ -978,6 +992,17 @@ function changeSliders() {
     
 }
 
+// this is for the drag and swap thing
+function swapColors(a, b) {
+    const rgb = [...hexDecode(codeInput.value)];
+    for (let k = 0; k< 3; k++) {
+        const temp = rgb[a*4 + k];
+        rgb[a*4 + k] = rgb[b*4 +k];
+        rgb[b*4 +k] = temp;
+    }
+    genCodeManual(rgb);
+    changeSliders();
+}
 
 function genCodeManual(rgb) {
 
