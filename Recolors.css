@@ -1142,3 +1142,6 @@ a:visited {
 #notesBox:focus {
     outline: 1px solid rgba(148, 132, 201, 1);
 }
+.partName {
+    cursor: grab;
+}
