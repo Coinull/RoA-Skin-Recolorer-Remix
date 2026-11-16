@@ -796,7 +796,9 @@ function darkMode() {
         r.style.setProperty("--bgH", "#9484c9");
         r.style.setProperty("--bgD", "#4a368a");
     }
+    try {localStorage.setItem("darkTheme", darkCheck.checked);} catch (e) {}
 }
+try {darkCheck.checked = localStorage.getItem("darkTheme") === "true";} catch (e) {}
 darkMode(); // to activate at startup
 
 // eyecandy focus enhancer 90000
