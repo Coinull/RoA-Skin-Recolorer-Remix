@@ -992,7 +992,7 @@ function changeSliders() {
     
 }
 
-// this is for the drag and swap thing
+// this is for the drag and swap thing, swapping colors
 function swapColors(a, b) {
     const rgb = [...hexDecode(codeInput.value)];
     for (let k = 0; k< 3; k++) {
