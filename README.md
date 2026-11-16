@@ -6,8 +6,12 @@
   
 </p>
 
-Modifies Eeadek's Rivals of Aether's recolor tool to add simple QOL
+Modifies Readek's Rivals of Aether's recolor tool to add simple QOL
 
-So far only hex input has been added, but hopefully more in the future!
+Features added so far:
+- Hex code editing
+- Notepad toggle in settings
+- Color swapping with pill dragging
+- Persistent dark mode
 
 Go [here](https://coinull.github.io/RoA-Skin-Recolorer-Remix/) to try it out!
