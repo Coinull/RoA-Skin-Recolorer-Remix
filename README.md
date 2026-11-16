@@ -2,7 +2,7 @@
 
 <p align="center">
 
-  <img src="https://github.com/Readek/RoA-Skin-Recolorer/blob/main/Docs/Resources/preview.png" alt="Preview">
+  <img src="https://github.com/Coinull/RoA-Skin-Recolorer-Remix/blob/main/Docs/Resources/thumbnail.png" alt="Preview">
   
 </p>
 
