@@ -9,9 +9,8 @@ let customPortrait, customSprite; // will hold user uploaded images
 const alphas = [100, 100, 100, 100, 100, 100, 100, 100, 100];
 const codeReg = "^([A-Fa-f0-9]+\-)+([A-Fa-f0-9])+$";
 const ograReg = "^([A-Fa-f0-9]{6}\-)+([A-Fa-f0-9]){6}$";
-const charList = ["Clairen", "Forsburn", "Zetterburn", "Wrastor", "Absa", "Elliana",
-    "Sylvanos", "Maypul", "Kragg", "Orcane", "Etalus", "Ranno", "Ori and Sein",
-    "Shovel Knight", "Mollo", "Hodan", "Pomme", "Olympia"];
+const charList = ["Mollo", "Clairen", "Forsburn", "Zetterburn", "Shovel Knight", "Wrastor", "Absa", "Elliana",
+    "Pomme", "Olympia", "Sylvanos", "Maypul", "Kragg", "Ori and Sein", "Orcane", "Etalus", "Ranno", "Hodan"];
 
 const fullCanvas = document.getElementById("fullCanvas");
 const animCanvas = document.getElementById("animCanvas");
@@ -481,18 +480,26 @@ function charSwitcher() {
         newDiv.setAttribute("data-tooltip-delay", "none");
 
         //depending on the char num, set elemental background
-        if (i < 3) { //fire
+        if (i < 1) { //mollo aka literallry the best one
+            newDiv.style.backgroundColor = "#cf7171"
+        } else if (i < 4) { //fire
             newDiv.style.backgroundColor = "#ba6464"
-        } else if (i < 6) { //air
-            newDiv.style.backgroundColor = "#bd8ac1"
-        } else if (i < 9) { //earth
-            newDiv.style.backgroundColor = "#6ca577"
-        } else if (i < 12) { //water
-            newDiv.style.backgroundColor = "#6673ad"
-        } else if (i < 14) { //but everything changed when the indie characters attacked
+        } else if (i < 5) { //yet another shovel knight crossover
             newDiv.style.backgroundColor = "#c9b4d3"
-        } else { // but nobody expected the workshop inquisition
-            newDiv.style.backgroundColor = "#a1a1a1"
+        } else if (i < 8) { //air
+            newDiv.style.backgroundColor = "#bd8ac1"
+        } else if (i < 9) { //that fucking mouse that i hate
+            newDiv.style.backgroundColor = "#cda1d1"
+        } else if (i < 10) { //MMA rat
+            newDiv.style.backgroundColor = "#87bd92"
+        } else if (i < 13) { //earth
+            newDiv.style.backgroundColor = "#6ca577"
+        } else if (i < 14) { //lil guy
+            newDiv.style.backgroundColor = "#c9b4d3"
+        } else if (i < 17) { //bloop
+            newDiv.style.backgroundColor = "#6673ad"
+        } else { // mmm,,, monke
+            newDiv.style.backgroundColor = "#8d99ce"
         }
 
         //if the div gets clicked, update the character to be recolored
@@ -512,10 +519,8 @@ function charSwitcher() {
         newDiv.appendChild(newImg);
 
         //now add it to the actual interface
-        if (i <= 5) {
+        if (i <= 8) {
             row1.appendChild(newDiv);
-        } else if (i <= 11) {
-            row2.appendChild(newDiv);
         } else {
             row3.appendChild(newDiv);
         }
