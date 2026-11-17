@@ -1124,7 +1124,15 @@ a:visited {
     
     [data-tooltip]::before {
         display: none;
+    } 
+        #charDropdown { /* to make the character selector smaller on phones */
+        left: -5px;
+        top: 50px;
     }
+    .charEntry {
+        padding: 3px;
+    }
+
 }
 #focusImg {
     position: fixed;
